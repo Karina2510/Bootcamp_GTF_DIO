@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="karina"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-23 06:47:28 PM"/>
+        <attribute name="created" value="a2FyaW5hO0RFU0tUT1AtSlIzOUdMSTsyMDIyLTA0LTIwOzAyOjI2OjU4IFBNOzI5NzY="/>
+        <attribute name="edited" value="a2FyaW5hO0RFU0tUT1AtSlIzOUdMSTsyMDIyLTA0LTIzOzA2OjQ3OjI4IFBNOzc7MzA5Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nomeVendedor" type="String" array="False" size=""/>
+            <output expression="&quot;Qual o seu nome vendedor?&quot;" newline="True"/>
+            <input variable="nomeVendedor"/>
+            <declare name="janeiro, fevereiro, marco, abril, mediaVendas, somaVendas" type="Real" array="False" size=""/>
+            <output expression="nomeVendedor &amp; &quot;, Por favor informe os valores das suas vendas a partir de janeiro at&#233; abril&quot;" newline="True"/>
+            <input variable="janeiro"/>
+            <input variable="fevereiro"/>
+            <input variable="marco"/>
+            <input variable="abril"/>
+            <assign variable="somaVendas" expression="janeiro+fevereiro+marco+abril"/>
+            <output expression="nomeVendedor &amp; &quot; a soma total de vendas realizadas nos 4 meses &#233;: R$ &quot; &amp; somaVendas" newline="True"/>
+            <assign variable="mediaVendas" expression="(janeiro+fevereiro+marco+abril)/4"/>
+            <output expression="nomeVendedor &amp; &quot; a media das vendas &#233;: R$ &quot; &amp; mediaVendas" newline="True"/>
+            <if expression="mediaVendas &gt;=5000.00">
+                <then>
+                    <output expression="&quot;Parab&#233;ns, voc&#234; receber&#225; um bonus de 10%&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Reber&#225; abono de 3%&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
